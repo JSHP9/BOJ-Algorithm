@@ -18,9 +18,9 @@ int main()
         posXY.push_back({x, y});
     }
 
-    sort(posXY.begin(), posXY.end(), [](std::pair<int, int>& a, std::pair<int, int>& b) { // 람다함수
+    sort(posXY.begin(), posXY.end(), [](std::pair<int, int>& a, std::pair<int, int>& b) {
         if (a.second == b.second)
-            return std::less<int>()(a.first, b.first); // std::less<>()는 두 값을 비교했을때 첫번째가 더 작으면 true
+            return std::less<int>()(a.first, b.first);
         return std::less<int>()(a.second, b.second);
     });
     
