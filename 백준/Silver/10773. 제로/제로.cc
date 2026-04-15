@@ -23,8 +23,7 @@ int main()
     }
 
     int len = myStack.size();
-    // len 안쓰고 myStack.size()를 범위로 지정하면 pop으로 인해 범위가 점점 짧아져서 데이터 전부 추출이 안됨
-    for (int i = 0; i < len; ++i) { 
+    for (int i = 0; i < len; ++i) {
         sum += myStack.top();
         myStack.pop();
     }
