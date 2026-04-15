@@ -1,19 +1,8 @@
-#include <iostream>
-
-using namespace std;
-
-class Sum {
-	int x, y;
-public:
-	void add() {
-		cin >> x >> y;
-		cout << x - y;
-	}
-};
-
+#include <stdio.h>
 int main()
 {
-	Sum a;
-	a.add();
-	return 0;
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d", a - b);
+    return 0;
 }
