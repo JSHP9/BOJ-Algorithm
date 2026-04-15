@@ -23,7 +23,6 @@ int main()
         cardM.push_back(card);
     }
     
-    // 값 -> 순위 매핑
     std::unordered_map<int, int> cardMap;
     for (size_t i = 0; i < cardN.size(); ++i) {
         cardMap[cardN[i]] = 1;
