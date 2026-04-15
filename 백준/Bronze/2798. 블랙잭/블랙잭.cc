@@ -18,13 +18,13 @@ int main()
         card2.push_back(card);
         card3.push_back(card);
     }
-    // 부르트 포스(무차별 대입, 노가다)
+    
     for (int i = 0; i < n - 2;  ++i) {
         for (int j = i + 1; j < n - 1; ++j) {
             for (int k = j + 1; k < n; ++k) {
-                currentCard = card1[i] + card2[j] + card3[k]; // 모든 경우의 수 대입
-                if (currentCard <= m) // m을 넘지 않게 설정
-                    cardSum = max(cardSum, currentCard); // max함수는 algorithm라이브러리
+                currentCard = card1[i] + card2[j] + card3[k];
+                if (currentCard <= m)
+                    cardSum = max(cardSum, currentCard);
             }
         }
     }
