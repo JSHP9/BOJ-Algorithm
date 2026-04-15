@@ -5,12 +5,12 @@ int main() {
     int n, x;
     scanf("%d %d", &n, &x);
 
-    int a[n];
+    int a;
     for (int i = 0; i < n; i++)
     {
-        scanf("%d", &a[i]);
-        if (a[i] < x)
-            printf("%d ", a[i]);
+        scanf("%d", &a);
+        if (a < x)
+            printf("%d ", a);
         
     }
     return 0;
