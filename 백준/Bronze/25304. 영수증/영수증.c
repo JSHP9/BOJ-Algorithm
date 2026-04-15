@@ -3,20 +3,18 @@
 int main(void)
 {
 	int x, n, a, b;
-	int sum = 0;
+	int res = 0;
 	
-	scanf("%d", &x);
-	scanf("%d", &n);
+	scanf("%d\n", &x);
+	scanf("%d\n", &n);
 
 	for (int i = 0; i < n; i++) {
 		scanf("%d %d", &a, &b);
-		sum += a * b;
+		res += a * b;
 	}
 
-	if (x == sum) 
-        printf("Yes");
-	else 
-        printf("No");
+	if (x == res) printf("Yes");
+	else printf("No");
 
 	return 0;
 }
