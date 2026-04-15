@@ -19,10 +19,14 @@ int main()
     
 }
 
-int gcd(int n, int m){
-    if(n % m == 0) 
-        return m;
-    return gcd(m, n % m);
+int gcd(int a, int b) {
+    int c = a % b;
+    while (c != 0) {
+        a = b;
+        b = c;
+        c = a % b;
+    }
+    return b;
 }
 int lcm(int n, int m)
 {
