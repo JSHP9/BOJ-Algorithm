@@ -1,7 +1,8 @@
 #include <iostream>
-#include <unordered_set>
+#include <vector>
+#include <algorithm> // for std::sort, std::binary_search
 
-using std::cin, std::cout, std::unordered_set;
+using std::cin, std::cout, std::vector;
 
 int main() {
     // I/O 최적화
@@ -11,22 +12,25 @@ int main() {
     // 입력
     int N;
     cin >> N;
-    //  정렬된 상태가 필요 없다고 생각할 때 사용함 vector보다 빠름
-    // unordered_set은 o(1), vector는 o(N)임
-    // 값을 빠르게 찾고자 할 때 매우 효율적인 자료구조
-    unordered_set<int> A;
+    vector<int> A(N);
     for (int i = 0; i < N; ++i) {
-        int x;
-        cin >> x;
-        A.insert(x);
+        cin >> A[i];
     }
 
     int M;
     cin >> M;
+    vector<int> queries(M);
     for (int i = 0; i < M; ++i) {
-        int query;
-        cin >> query;
-        if (A.count(query)) {
+        cin >> queries[i];
+    }
+
+    // A 정렬
+    std::sort(A.begin(), A.end());
+
+    // 각 쿼리에 대해 이분 탐색 수행
+    for (int query : queries) {
+        // binary_search: 이분 탐색을 제공하는 함수
+        if (std::binary_search(A.begin(), A.end(), query)) {
             cout << 1 << '\n';
         } else {
             cout << 0 << '\n';
@@ -35,3 +39,14 @@ int main() {
 
     return 0;
 }
+
+/*
+이분 탐색의 기본 원리
+데이터는 반드시 정렬되어 있어야 함
+정렬되지 않은 상태에서는 이분 탐색이 불가능함
+
+가운데 값을 기준으로 판단:
+찾고 싶은 값이 가운데 값보다 작으면 왼쪽만 검색.
+크면 오른쪽만 검색.
+매번 절반씩 줄여나감.
+*/
