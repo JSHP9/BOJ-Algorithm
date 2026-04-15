@@ -1,9 +1,8 @@
 #include <iostream>
+#include <numeric>
+#include <algorithm>
 
 using std::cout, std::cin;
-
-int gcd(int n, int m);
-int lcm(int n, int m);
 
 int main() 
 { 
@@ -12,23 +11,6 @@ int main()
     cout.tie(nullptr);
 
     int n, m;
-    cin >> n >> m;
-    int g = gcd(n, m);
-    int l = lcm(n ,m);
-    cout << g << '\n' << l;
-    
-}
-
-int gcd(int a, int b) {
-    int c = a % b;
-    while (c != 0) {
-        a = b;
-        b = c;
-        c = a % b;
-    }
-    return b;
-}
-int lcm(int n, int m)
-{
-    return n * m / gcd(n, m);
+    cin >> n >> m;    
+    cout << std::gcd(n, m) << '\n' << std::lcm(n, m);    
 }
