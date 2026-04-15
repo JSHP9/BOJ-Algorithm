@@ -26,7 +26,7 @@ int main() {
 
     // 산술 평균
     int avg = round((double)sum / n);
-    if (avg == 0) cout << 0 << '\n';
+    if (avg == 0) cout << 0 << '\n'; // -0을 0으로 출력하는 용도
     else cout << avg << '\n';
 
     // 중앙값
