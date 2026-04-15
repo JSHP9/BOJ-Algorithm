@@ -20,10 +20,8 @@ int main()
     int cn = (con[0] * den[1]) + (con[1] * den[0]);
     int dn = den[0] * den[1];
 
-    // 최대공약수
     int g = std::gcd(cn, dn);
 
-    // 최대공약수로 약분
     cout << cn / g << " " << dn / g;
     
     return 0;
