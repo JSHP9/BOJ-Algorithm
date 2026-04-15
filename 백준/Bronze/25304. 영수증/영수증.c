@@ -1,20 +1,12 @@
-#include <stdio.h>
-
-int main(void)
-{
-	int x, n, a, b;
-	int res = 0;
-	
-	scanf("%d\n", &x);
-	scanf("%d\n", &n);
-
-	for (int i = 0; i < n; i++) {
-		scanf("%d %d", &a, &b);
-		res += a * b;
-	}
-
-	if (x == res) printf("Yes");
-	else printf("No");
-
-	return 0;
-}
+<html>
+<head><title>504 Gateway Time-out</title></head>
+<body>
+<center><h1>504 Gateway Time-out</h1></center>
+</body>
+</html>
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
