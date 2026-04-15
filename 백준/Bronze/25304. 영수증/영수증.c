@@ -13,10 +13,11 @@ int main(void)
         scanf("%d %d", &a, &b);
         sum += (a * b);
     }
-    if (x == sum)
+
+	if (x == sum) 
         printf("Yes");
-    else
+	else 
         printf("No");
-    return 0;
-    
+
+	return 0;
 }
